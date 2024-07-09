@@ -23,8 +23,8 @@ const Random = () => {
 
     // Parse the Data
     d3.csv(
-     //  "https://raw.githubusercontent.com/christine-iyer/d3-practice/main/src/data/data.csv"
-      "https://raw.githubusercontent.com/holtzy/data_to_viz/master/Example_dataset/7_OneCatOneNum_header.csv"
+     "https://raw.githubusercontent.com/christine-iyer/d3-practice/main/src/data/data.csv"
+      //"https://raw.githubusercontent.com/holtzy/data_to_viz/master/Example_dataset/7_OneCatOneNum_header.csv"
     ).then(function (data) {
       // X axis
       const x = d3
