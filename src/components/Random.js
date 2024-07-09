@@ -1,6 +1,8 @@
 import * as d3 from "d3";
 import { useEffect, useRef } from "react";
 
+const customTimeParser = d3.timeParse("%Y-%m-%d");
+
 const Random = () => {
   const ref = useRef();
 
