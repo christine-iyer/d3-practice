@@ -42,7 +42,7 @@ const Random = () => {
     if (!data) return;
 
     var margin = { top: 10, right: 30, bottom: 30, left: 60 },
-      width = 660 - margin.left - margin.right,
+      width = 700 - margin.left - margin.right,
       height = 400 - margin.top - margin.bottom;
 
     // Append the svg object to the body of the page
@@ -74,11 +74,11 @@ const Random = () => {
 
     // Define color scale for years
     var color = d3.scaleOrdinal()
-      .domain([2020, 2021, 20.1, 2023, 2024])
-      .range(["rgb(203,203,70)", "rgb(103,103,154)", "rgb(132,45,103)", "rgb(233, 64,147)", "rgb(234,97,42)"]);
+      .domain([2020, 2021, 2022, 2023, 2024])
+      .range(["red", "pink", "orange", "green", "blue"]);
 
     // Define x-axis scale (0 to 52 weeks)
-    var x = d3.scaleTime()
+    var x = d3.scaleLinear()
       .domain([0, 52]) // Week numbers from 0 to 52
       .range([0, width]);
 
@@ -86,130 +86,20 @@ const Random = () => {
     var y = d3.scaleLinear()
       .domain([0, d3.max(data, function (d) { return d.value; })])
       .range([height, 0]);
-    // Add shaded area between weeks 40 and 44
 
-
-// Jan
-svg.append("rect")
-.attr("x", x(0))
-.attr("width", x(4) - x(0))
-.attr("y", 0)
-.attr("height", height)
-.attr("fill", "green")
-.attr("opacity", 0.1);
-// Feb
-svg.append("rect")
-.attr("x", x(4))
-.attr("width", x(8) - x(4))
-.attr("y", 0)
-.attr("height", height)
-.attr("fill", "yellow")
-.attr("opacity", 0.1);
-// March
-svg.append("rect")
-.attr("x", x(8))
-.attr("width", x(12) - x(8))
-.attr("y", 0)
-.attr("height", height)
-.attr("fill", "green")
-.attr("opacity", 0.1);
-// April
-svg.append("rect")
-.attr("x", x(12))
-.attr("width", x(16) - x(12))
-.attr("y", 0)
-.attr("height", height)
-.attr("fill", "yellow")
-.attr("opacity", 0.1);
-// May
-svg.append("rect")
-.attr("x", x(16))
-.attr("width", x(20) - x(16))
-.attr("y", 0)
-.attr("height", height)
-.attr("fill", "green")
-.attr("opacity", 0.1);
-// June
-svg.append("rect")
-.attr("x", x(20))
-.attr("width", x(24) - x(20))
-.attr("y", 0)
-.attr("height", height)
-.attr("fill", "yellow")
-.attr("opacity", 0.1);
-// July
-svg.append("rect")
-.attr("x", x(24))
-.attr("width", x(28) - x(24))
-.attr("y", 0)
-.attr("height", height)
-.attr("fill", "green")
-.attr("opacity", 0.1);
-// July
-svg.append("rect")
-.attr("x", x(28))
-.attr("width", x(32) - x(28))
-.attr("y", 0)
-.attr("height", height)
-.attr("fill", "yellow")
-.attr("opacity", 0.1);
-// Aug
-svg.append("rect")
-.attr("x", x(32))
-.attr("width", x(36) - x(32))
-.attr("y", 0)
-.attr("height", height)
-.attr("fill", "green")
-.attr("opacity", 0.1);
-// Sept
-svg.append("rect")
-.attr("x", x(36))
-.attr("width", x(40) - x(36))
-.attr("y", 0)
-.attr("height", height)
-.attr("fill", "yellow")
-.attr("opacity", 0.1);
-// October 
+    // Add shaded area between weeks 44 and 48
     svg.append("rect")
-      .attr("x", x(40))
+      .attr("x", x(44))
       .attr("width", x(44) - x(40))
       .attr("y", 0)
       .attr("height", height)
-      .attr("fill", "green")
-      .attr("opacity", 0.1)
-      ;
-
-    // November
-    svg.append("rect")
-      .attr("x", x(44))
-      .attr("width", x(48) - x(44))
-      .attr("y", 0)
-      .attr("height", height)
-      .attr("fill", "yellow")
-      .attr("opacity", 0.1);
-    
-      svg.append("text")
-      .attr("x", x(50)) // Position the text at the center of the shaded area
-      .attr("y", height /2) // Vertically centered
-      .attr("text-anchor", "middle") // Center the text horizontally
-      .attr("dy", ".35em") // Adjust vertical alignment
-      .attr("font-size", "14px") // Font size
-      .attr("fill", "black") // Font color
-      .text("Dec"); 
-      
-    // December
-    svg.append("rect")
-      .attr("x", x(48))
-      .attr("width", x(52) - x(48))
-      .attr("y", 0)
-      .attr("height", height)
-      .attr("fill", "green")
-      .attr("opacity", 0.1);
+      .attr("fill", "lightyellow")
+      .attr("opacity", 0.5);
 
     // Add x-axis
     svg.append("g")
       .attr("transform", "translate(0," + height + ")")
-      .call(d3.axisBottom(x).ticks(6).tickFormat(d3.format("d")))
+      .call(d3.axisBottom(x).ticks(10).tickFormat(d3.format("d")))
       .selectAll("text")
       .attr("transform", "rotate(-45)")
       .style("text-anchor", "end")
@@ -257,7 +147,7 @@ svg.append("rect")
               return x(d.week);
             })
             .attr("cy", function (d) { return y(d.value); })
-            .attr("r", 0)
+            .attr("r", 3)
             .attr("fill", color(yearData[0]))
             .on("mouseover", function (event, d) {
               tooltip.transition()
@@ -284,26 +174,26 @@ svg.append("rect")
     updateChart(selectedYears);
 
     // Add legend
-    // var legend = svg.selectAll(".legend")
-    //   .data(color.domain())
-    //   .enter().append("g")
-    //   .attr("class", "legend")
-    //   .attr("transform", function (d, i) {
-    //     return "translate(0," + i * 20 + ")";
-    //   });
+    var legend = svg.selectAll(".legend")
+      .data(color.domain())
+      .enter().append("g")
+      .attr("class", "legend")
+      .attr("transform", function (d, i) {
+        return "translate(0," + i * 20 + ")";
+      });
 
-    // legend.append("rect")
-    //   .attr("x", width - 18)
-    //   .attr("width", 18)
-    //   .attr("height", 18)
-    //   .style("fill", color);
+    legend.append("rect")
+      .attr("x", width - 18)
+      .attr("width", 18)
+      .attr("height", 18)
+      .style("fill", color);
 
-    // legend.append("text")
-    //   .attr("x", width - 24)
-    //   .attr("y", 9)
-    //   .attr("dy", ".35em")
-    //   .style("text-anchor", "end")
-    //   .text(function (d) { return d; });
+    legend.append("text")
+      .attr("x", width - 24)
+      .attr("y", 9)
+      .attr("dy", ".35em")
+      .style("text-anchor", "end")
+      .text(function (d) { return d; });
 
   }, [data, selectedYears]);
 
@@ -319,77 +209,54 @@ svg.append("rect")
   return (
     <div style={{ textAlign: 'center' }}>
       <div style={{ marginBottom: '20px' }}>
-        <label
-          style={{
-            backgroundColor: "rgb(203,203,70)",
-            padding: '5px',
-            margin: '0 5px'
-          }}>
-          <input
-            type="checkbox"
-            style={{ opacity: .4 }}
-            value="2020"
-            checked={selectedYears.includes(2020)}
-            onChange={handleYearChange} />
+        <label 
+        style={{ backgroundColor: 'red', padding: '5px', margin: '0 5px' }}>
+          <input 
+          type="checkbox" 
+          value="2020" 
+          checked={selectedYears.includes(2020)} 
+          onChange={handleYearChange} />
           2020
         </label>
 
-        <label
-          style={{
-            backgroundColor: "rgb(103,103,154)",
-            padding: '5px',
-            margin: '0 5px'
-          }}>
-          <input
-            type="checkbox"
-            style={{ opacity: .4 }}
-            value="2021"
-            checked={selectedYears.includes(2021)}
-            onChange={handleYearChange} />
+        <label 
+        style={{ backgroundColor: 'pink', padding: '5px', margin: '0 5px' }}>
+          <input 
+          type="checkbox" 
+          value="2021" 
+          checked={selectedYears.includes(2021)} 
+          onChange={handleYearChange} />
           2021
         </label>
 
-        <label style={{
-          backgroundColor: "rgb(132,45,103)",
-          padding: '5px',
-          margin: '0 5px'
-        }}>
-          <input
-            type="checkbox"
-            style={{ opacity: 0.4 }}
-            value="2022"
-            checked={selectedYears.includes(2022)}
-            onChange={handleYearChange} />
+        <label>
+          <input 
+          type="checkbox" 
+          value="2022" 
+          checked={selectedYears.includes(2022)} 
+          onChange={handleYearChange} />
           2022
         </label>
-        <label style={{
-          backgroundColor: "rgb(233, 64,147)",
-          padding: '5px',
-          margin: '0 5px'
-        }}>
-          <input
-            type="checkbox"
-            style={{ opacity: 0.4 }}
-            value="2023"
-            checked={selectedYears.includes(2023)}
-            onChange={handleYearChange} />
+        <label>
+          <input 
+          type="checkbox" 
+          value="2023" 
+          checked={selectedYears.includes(2023)} 
+          onChange={handleYearChange} />
           2023
         </label>
-        <label style={{
-          backgroundColor: "rgb(234,97,42)",
-          padding: '5px',
-          margin: '0 5px'
-        }}>
-          <input
-            type="checkbox" value="2024" style={{ opacity: 0.4 }}
-            checked={selectedYears.includes(2024)}
-            onChange={handleYearChange} />
+        <label>
+          <input 
+          type="checkbox" value="2024" 
+          checked={selectedYears.includes(2024)} 
+          onChange={handleYearChange} />
           2024
         </label>
       </div>
-      <svg width={660} height={400} id="my_dataviz" ref={ref} />
+      <svg width={460} height={400} id="my_dataviz" ref={ref} />
     </div>
   );
 };
 
 export default Random;
+
