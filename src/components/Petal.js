@@ -1,6 +1,6 @@
 import React, { useRef, useEffect }from 'react'
 import * as d3 from 'd3'
-const Circle = () => {
+const Petal = () => {
      const ref = useRef()
    
      useEffect(() => {
@@ -9,15 +9,15 @@ const Circle = () => {
          .attr("cx", 150)
          .attr("cy", 77)
          .attr("r",  50)
-         .attr('fill', 'yellow')
+         .attr('fill', 'blue')
      }, [])
    
      return (
       <>
-      <h1>Circle</h1>
+      <h1>Petal</h1>
        <svg
          ref={ref}
        /></>
      )
    }
-   export default Circle
+   export default Petal

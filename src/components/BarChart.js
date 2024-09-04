@@ -24,8 +24,8 @@ class BarChart extends Component {
             .attr("y", (d, i) => 300 - 10 * d)
             .attr("width", 65)
             .attr("height", (d, i) => d * 10)
-            .attr("stroke", 'yellow')
-            .attr("fill", "green");
+            .attr("stroke", 'orange')
+            .attr("fill", "blue");
 
 
         svg.selectAll("text")
@@ -38,7 +38,7 @@ class BarChart extends Component {
     }
 
     render() {
-        return <div id={"#" + this.props.id}> This is a
+        return <div id={"#" + this.props.id}> This is a page with a number of visuallizations, the last of which is a pair of bar charts.
 
         </div>
     }
