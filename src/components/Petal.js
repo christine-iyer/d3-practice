@@ -1,23 +1,26 @@
-import React, { useRef, useEffect }from 'react'
 import * as d3 from 'd3'
-const Petal = () => {
-     const ref = useRef()
-   
-     useEffect(() => {
-       const svgElement = d3.select(ref.current)
-       svgElement.append("circle")
-         .attr("cx", 150)
-         .attr("cy", 77)
-         .attr("r",  50)
-         .attr('fill', 'blue')
-     }, [])
-   
-     return (
-      <>
-      <h1>Petal</h1>
-       <svg
-         ref={ref}
-       /></>
-     )
-   }
-   export default Petal
+import React from 'react';
+
+const Petal = () => (
+
+  <>
+  <h1>A petal</h1> <svg width="100" height="100" style={{ overflow: 'visible', margin: '5px' }}>
+    <path
+      d="
+      M0,0 
+      C44,49 15,70 20,100 
+      L0,85 
+      L-20,100 
+      C-15,70 -44,49 0,0
+      "
+      fill="blue"
+      stroke="red"
+      strokeWidth="2"
+      transform="translate(50,0)
+      "
+    />
+  </svg>
+  </>
+);
+
+export default Petal;

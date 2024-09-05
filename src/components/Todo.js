@@ -1,7 +1,4 @@
 import { useState } from "react"
-
-
-
 export default function Todo({ todo, completeTodo, editTodoText, deleteTodo }) {
   const [showInput, setShowInput] = useState(false)
   return (

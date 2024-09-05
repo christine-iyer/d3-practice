@@ -4,7 +4,7 @@ import TodoList from "./components/TodoList"
 import BarChart from "./components/BarChart"
 import Circle from "./components/Circle"
 import TimeSeries from "./components/TimeSeries"
-import Petal from "./components/Petal"
+import CreatePetal from "./components/CreatePetal"
 
 
 
@@ -12,6 +12,28 @@ import Petal from "./components/Petal"
 export default function App() {
   const [todos, setTodos] = useState([])
 
+  const addPetal = (e) => {
+    const newPetal = [{
+      petal1: e.target.value,
+      petal2: e.target.value,
+      petal3: e.target.value,
+      petal4: e.target.value,
+      petal5: e.target.value,
+      petal6: e.target.value,
+      petal7: e.target.value,
+      petal8: e.target.value,
+      petal9: e.target.value,
+      petal10: e.target.value,
+      petal11: e.target.value,
+      petal12: e.target.value
+
+    }]
+    setPetals([newPetal, ...petals])
+
+    e.target.value = ''
+    console.log(petals);
+    // barData = todos.map((todo) => parseInt(todo.text))
+  }
 
   const addTodo = (e) => {
     const newTodo = { text: e.target.value, id: Date.now(), completed: false }
@@ -22,10 +44,6 @@ export default function App() {
     // barData = todos.map((todo) => parseInt(todo.text))
   }
 
-
-
-  // const wheresAntony = students.findIndex(student => student.name === 'Antony')
-  // students[wheresAntony].grade = 'A+++'
   const completeTodo = (id, e) => {
     const todosCopy = [...todos]
     const indexOfTodo = todosCopy.findIndex((i) => i.id === id)
@@ -64,7 +82,7 @@ export default function App() {
         height={300} />
       <Circle />
       <TimeSeries />
-      <Petal />
+      <CreatePetal />
 
 
 
