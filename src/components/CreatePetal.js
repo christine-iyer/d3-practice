@@ -1,18 +1,18 @@
-export default function createPetal({
-  createPetal,
-  petal,
+export default function addPetal({
+  addPetal,
+  petals,
   handleChange
 }) {
   
   return (
     <>
-      <h2>Create A PetalcreatePetal</h2>
+      <h2>Create A PetaladdPetal</h2>
       <div className='container'>
         <form style={{ width: '100%', position: 'sticky', float: 'left', fontFamily: 'bradleyHand' }}
           className='form'
           onSubmit={(e) => {
             e.preventDefault()
-            createPetal()
+            addPetal()
           }}
         >
           <div >
@@ -20,7 +20,7 @@ export default function createPetal({
         <input 
           type="number" 
           name="petal1" 
-          value={petal.petal1 || ""} 
+          value={petals.petal1 || ""} 
           onChange={handleChange}
         />
         </label>
@@ -28,7 +28,7 @@ export default function createPetal({
         <input 
           type="number" 
           name="petal2" 
-          value={petal.petal2 || ""} 
+          value={petals.petal2 || ""} 
           onChange={handleChange}
         />
         </label>
@@ -36,7 +36,7 @@ export default function createPetal({
         <input 
           type="number" 
           name="petal3" 
-          value={petal.petal3 || ""} 
+          value={petals.petal3 || ""} 
           onChange={handleChange}
         />
         </label>
@@ -44,7 +44,7 @@ export default function createPetal({
         <input 
           type="number" 
           name="petal4" 
-          value={petal.petal4 || ""} 
+          value={petals.petal4 || ""} 
           onChange={handleChange}
         />
         </label>
@@ -52,7 +52,7 @@ export default function createPetal({
         <input 
           type="number" 
           name="petal5" 
-          value={petal.petal5 || ""} 
+          value={petals.petal5 || ""} 
           onChange={handleChange}
         />
         </label>
@@ -60,7 +60,7 @@ export default function createPetal({
         <input 
           type="number" 
           name="petal6" 
-          value={petal.petal6 || ""} 
+          value={petals.petal6 || ""} 
           onChange={handleChange}
         />
         </label>
@@ -68,7 +68,7 @@ export default function createPetal({
         <input 
           type="number" 
           name="petal7" 
-          value={petal.petal7 || ""} 
+          value={petals.petal7 || ""} 
           onChange={handleChange}
         />
         </label>
@@ -76,7 +76,7 @@ export default function createPetal({
         <input 
           type="number" 
           name="petal8" 
-          value={petal.petal8 || ""} 
+          value={petals.petal8 || ""} 
           onChange={handleChange}
         />
         </label>
@@ -84,7 +84,7 @@ export default function createPetal({
         <input 
           type="number" 
           name="petal9" 
-          value={petal.petal9 || ""} 
+          value={petals.petal9 || ""} 
           onChange={handleChange}
         />
         </label>
@@ -92,7 +92,7 @@ export default function createPetal({
         <input 
           type="number" 
           name="petal10" 
-          value={petal.petal10 || ""} 
+          value={petals.petal10 || ""} 
           onChange={handleChange}
         />
         </label>
@@ -100,7 +100,7 @@ export default function createPetal({
         <input 
           type="number" 
           name="petal11" 
-          value={petal.petal11 || ""} 
+          value={petals.petal11 || ""} 
           onChange={handleChange}
         />
         </label>
@@ -108,13 +108,13 @@ export default function createPetal({
         <input 
           type="number" 
           name="petal12" 
-          value={petal.petal12 || ""} 
+          value={petals.petal12 || ""} 
           onChange={handleChange}
         />
         </label>
 
           </div>
-          <button  className='button' type='submit' value='Create PetalcreatePetal'>Create</button>
+          <button  className='button' type='submit' value='Create PetaladdPetal'>Create</button>
         </form>
       </div>
 

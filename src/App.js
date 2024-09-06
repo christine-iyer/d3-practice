@@ -11,6 +11,7 @@ import CreatePetal from "./components/CreatePetal"
 
 export default function App() {
   const [todos, setTodos] = useState([])
+  const [petals, setPetals] = useState([])
 
   const addPetal = (e) => {
     const newPetal = [{
@@ -82,7 +83,9 @@ export default function App() {
         height={300} />
       <Circle />
       <TimeSeries />
-      <CreatePetal />
+      <CreatePetal 
+      petals={petals}
+      setPetals={setPetals}/>
 
 
 
