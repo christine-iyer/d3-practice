@@ -31,7 +31,7 @@ export default function App() {
     }]
     setPetals([newPetal, ...petals])
 
-    e.target.value = ''
+    e.target.value = 0
     console.log(petals);
     // barData = todos.map((todo) => parseInt(todo.text))
   }
@@ -70,7 +70,7 @@ export default function App() {
   return (
     <div className="App">
 
-      <TodoList
+      {/* <TodoList
         todos={todos}
         addTodo={addTodo}
         completeTodo={completeTodo}
@@ -82,8 +82,9 @@ export default function App() {
         width={700}
         height={300} />
       <Circle />
-      <TimeSeries />
+      <TimeSeries /> */}
       <CreatePetal 
+      // petal={petal}
       petals={petals}
       setPetals={setPetals}/>
 
