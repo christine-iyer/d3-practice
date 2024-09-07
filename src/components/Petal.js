@@ -4,6 +4,7 @@ import { HexColorPicker } from "react-colorful";
 import { Slider, Sketch, Material, Colorful, Compact, Circle, Wheel, Block, Github, Chrome } from '@uiw/react-color';
 import { Alpha, Hue, ShadeSlider, Saturation, Interactive, hsvaToHslaString } from '@uiw/react-color';
 import { EditableInput, EditableInputRGBA, EditableInputHSLA } from '@uiw/react-color';
+
 // import './style.css'
 export default function Petal() {
   // State to store user inputs for the curve control points
