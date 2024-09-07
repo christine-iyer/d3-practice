@@ -2,6 +2,30 @@ import * as d3 from 'd3'
 import React from 'react';
 
 const Petal = () => (
+// const [petal, setPetal] = useState({
+// m1: 0,
+// m2: 0,
+// c1: 0,
+// c2: 0, 
+// c3: 0,
+// c4: 0,
+// c5: 0,
+// c6: 0,
+// l1: 0,
+// l2: 0,
+// l3: 0,
+// l4: 0,
+// c7: 0,
+// c8: 0,
+// c9: 0,
+// c10: 0
+  
+//  })
+  
+
+
+
+  // })
         // M
         // 0,
         // 0 
