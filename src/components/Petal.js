@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 import { ChromePicker } from "react-color"; // You can also use CompactPicker
-
+import { HexColorPicker } from "react-colorful";
+import { Slider, Sketch, Material, Colorful, Compact, Circle, Wheel, Block, Github, Chrome } from '@uiw/react-color';
+import { Alpha, Hue, ShadeSlider, Saturation, Interactive, hsvaToHslaString } from '@uiw/react-color';
+import { EditableInput, EditableInputRGBA, EditableInputHSLA } from '@uiw/react-color';
+// import './style.css'
 export default function Petal() {
   // State to store user inputs for the curve control points
   const [controlPoint1, setControlPoint1] = useState({ x: 44, y: 49 });
@@ -91,22 +95,22 @@ export default function Petal() {
           />
         </label>
         <div>
-        <label>
-          Stroke Width:
-          <input
-            type="number"
-            value={strokeWidth}
-            onChange={(e) => handleStyleInput(e, setStrokeWidth)}
-          />
-        </label>
-        <label>
-          Transform:
-          <input
-            type="text"
-            value={transform}
-            onChange={(e) => handleStyleInput(e, setTransform)}
-          />
-        </label>
+          <label>
+            Stroke Width:
+            <input
+              type="number"
+              value={strokeWidth}
+              onChange={(e) => handleStyleInput(e, setStrokeWidth)}
+            />
+          </label>
+          <label>
+            Transform:
+            <input
+              type="text"
+              value={transform}
+              onChange={(e) => handleStyleInput(e, setTransform)}
+            />
+          </label>
         </div>
       </div>
 
@@ -114,17 +118,32 @@ export default function Petal() {
       <div style={{ display: "flex", gap: "20px", marginTop: "20px" }}>
         <div>
           <label>Fill Color:</label>
-          <ChromePicker
+          {/* <ChromePicker
             color={fillColor}
             onChange={(color) => setFillColor(color.hex)} // Use the hex value from ChromePicker
-          />
+          /> */}
+                    <Compact
+      style={{ marginLeft: 20 }}
+      color={fillColor}
+      onChange={(color) => {
+        setFillColor(color.hex);
+      }}
+    />
         </div>
         <div>
           <label>Stroke Color:</label>
-          <ChromePicker
+          <Compact
+      style={{ marginLeft: 20 }}
+      color={strokeColor}
+      onChange={(color) => {
+        setStrokeColor(color.hex);
+      }}
+    />
+          {/* <HexColorPicker
+            className="your"
             color={strokeColor}
-            onChange={(color) => setStrokeColor(color.hex)} // Use the hex value from ChromePicker
-          />
+            onChange={setStrokeColor} // Use the hex value from ChromePicker
+          /> */}
         </div>
       </div>
 
