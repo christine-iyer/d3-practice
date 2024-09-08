@@ -13,3 +13,9 @@
   height: inherit;
   border-radius: 0;
 }
+.compact-picker .uiw-color-pick-block-active {
+  color: '#A25772';
+}
+.circle-picker .uiw-color-circle-pointer {
+  border-radius: 50%;
+}
