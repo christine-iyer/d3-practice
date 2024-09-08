@@ -1,0 +1,109 @@
+['Alabama - 9 votes'
+'Alaska - 3 votes'
+'Arizona - 11 votes'
+'Arkansas - 6 votes'
+'California - 54 votes'
+'Colorado - 10 votes'
+'Connecticut - 7 votes'
+'Delaware - 3 votes'
+'District of Columbia - 3 votes'
+'Florida - 30 votes'
+'Georgia - 16 votes'
+'Hawaii - 4 votes'
+'Idaho - 4 votes'
+'Illinois - 19 votes'
+'Indiana - 11 votes'
+'Iowa - 6 votes'
+'Kansas - 6 votes'
+'Kentucky - 8 votes'
+'Louisiana - 8 votes'
+'Maine - 4 votes'
+'Maryland - 10 votes'
+'Massachusetts - 11 votes'
+'Michigan - 15 votes'
+'Minnesota - 10 votes'
+'Mississippi - 6 votes'
+'Missouri - 10 votes'
+'Montana - 4 votes'
+'Nebraska - 5 votes'
+'Nevada - 6 votes'
+'New Hampshire - 4 votes'
+'New Jersey - 14 votes'
+'New Mexico - 5 votes'
+'New York - 28 votes'
+'North Carolina - 16 votes'
+'North Dakota - 3 votes'
+'Ohio - 17 votes'
+'Oklahoma - 7 votes'
+'Oregon - 8 votes'
+'Pennsylvania - 19 votes'
+'Rhode Island - 4 votes'
+'South Carolina - 9 votes'
+'South Dakota - 3 votes'
+'Tennessee - 11 votes'
+'Texas - 40 votes'
+'Utah - 6 votes'
+'Vermont - 3 votes'
+'Virginia - 13 votes'
+'Washington - 12 votes'
+'West Virginia - 4 votes'
+'Wisconsin - 10 votes'
+'Wyoming - 3 votes']
+
+
+"State","Bird","Scientific","Picture","url"
+"Alabama","Yellowhammer","Colaptes auratus","https://commons.wikimedia.org/wiki/File:Northern_Flicker.jpg#/media/File:Northern_Flicker.jpg",
+"Alaska"	,"Willow ptarmigan","Lagopus lagopus","https://commons.wikimedia.org/wiki/File:Denali_National_Park_Ptarmigan.jpg#/media/File:Denali_National_Park_Ptarmigan.jpg",
+"Arizona"	,"Cactus wren","Campylorhynchus brunneicapillus", "https://commons.wikimedia.org/wiki/File:Campylorhynchus_brunneicapillus_20061226.jpg#/media/File:Campylorhynchus_brunneicapillus_20061226.jpg",
+"Arkansas",,"Northern mockingbird","Mimus polyglottos","https://commons.wikimedia.org/wiki/File:Mimus_polyglottos_adult_02_cropped.jpg#/media/File:Mimus_polyglottos_adult_02_cropped.jpg",
+"California",,"California quail","Callipepla californica","",
+"Colorado","Lark bunting","Calamospiza melanocorys", " ",
+"Connecticut","American robin","Turdus migratorius", "",,
+"Delaware","Delaware Blue Hen","Gallus gallus",",
+"District of Columbia",Wood thrush,Hylocichla mustelina,
+Florida,Northern mockingbird,Mimus polyglottos," ",
+Georgia,Brown thrasher,Toxostoma rufum," ",
+Guam,Guam rail (ko'ko'),Gallirallus owstoni," ",
+Hawaii,Hawaiian goose (nēnē),Branta sandvicensis," ",
+Idaho,Mountain bluebird,Sialia currucoides," ",
+Illinois,Northern cardinal,Cardinalis cardinalis," ",
+Indiana,Northern cardinal,Cardinalis cardinalis," ",
+Iowa,Eastern goldfinch (American goldfinch),Spinus tristis tristis," ",
+Kansas,Western meadowlark,Sturnella neglecta," ",
+Kentucky,Northern cardinal,Cardinalis cardinalis," ",
+Louisiana,Brown pelican,Pelecanus occidentalis," ",
+Maine,Chickadee,Poecile,Poecile atricapillus," ",
+Maryland,Baltimore oriole,Icterus galbula," ",
+Massachusetts,Black-capped chickadee,Poecile atricapilla," ",
+Michigan,American robin,Turdus migratorius," ",
+Minnesota,Common loon,Gavia immer," ",
+Mississippi,Northern mockingbird,Mimus polyglottos," ",
+Missouri,Eastern bluebird,Sialia sialis," ",
+Montana,Western meadowlark,Sturnella neglecta," ",
+Nebraska,Western meadowlark,Sturnella neglecta," ",
+Nevada,Mountain bluebird,Sialia currucoides," ",
+New Hampshire,Purple finch,Carpodacus purpureus," ",
+New Jersey,Eastern goldfinch (American goldfinch),Spinus tristis tristis," ",
+New Mexico,Greater roadrunner,Geococcyx californianus," ",
+New York,Eastern bluebird,Sialia sialis," ",
+North Carolina,Northern cardinal,Cardinalis cardinalis," ",
+North Dakota,Western meadowlark,Sturnella neglecta," ",
+Northern Mariana Islands,Mariana fruit-dove,Ptilinopus roseicapilla,,?
+Ohio,Northern cardinal,Cardinalis cardinalis," ",
+Oklahoma,Scissor-tailed flycatcher,Tyrannus forficatus," ",
+Oregon,Western meadowlark,Sturnella neglecta," ",
+Pennsylvania,Ruffed grouse[b],Bonasa umbellus," ",
+Puerto Rico,Puerto Rican spindalis (de facto),Spindalis portoricensis," ",
+Rhode Island,Rhode Island Red,Gallus gallus," ",
+South Carolina,Carolina wren,Thryothorus ludovicianus," ",
+South Dakota,Ring-necked pheasant,Phasianus colchicus," ",
+Tennessee,Northern mockingbird,Mimus polyglottos," ",
+Texas,Northern mockingbird,Mimus polyglottos," ",
+Utah,California gull,Larus californicus," ",
+Vermont,Hermit thrush,Catharus guttatus," ",
+Virgin Islands,Bananaquit,Coereba flaveola,,1970
+Virginia,Northern cardinal,Cardinalis cardinalis," ",
+Washington,Willow goldfinch (American goldfinch),Spinus tristis salicamans," ",
+West Virginia,Northern cardinal,Cardinalis cardinalis," ",
+Wisconsin,American robin,Turdus migratorius," ",
+Wyoming,Western meadowlark,Sturnella neglecta," ",
