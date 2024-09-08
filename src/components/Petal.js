@@ -76,31 +76,32 @@ export default function Petal() {
         </label>
       </div>
 
-      <div style={{ display: "flex", gap: "10px", margin: "10px", borderColor: 'red' }}>
-        <div>
+      {/* Container for the color pickers */}
+      <div style={{ display: "flex", gap: "20px", margin: "20px 0", flexWrap: "wrap" }}>
+        <div style={{ width: "150px", overflow: "visible" }}>
           <label>Fill Color:</label>
           <Circle
-            style={{ marginLeft: 0, backgroundColor:` ${strokeColor}`}}  // Background color change
+            style={{ marginTop: "10px", width: "100%" }}  // Ensure color picker fits in the container
             color={fillColor}
             colors={[
                '#FFDA76', '#FF8C9E', '#FF4E88', '#ffb6b1',
-              '#ffc0cb', '#ffd700', '#C65BCF', '#ff7373', '#ffeb3b', '#fff68f',
-              '#E1AFD1','#F27BBD'
-              
+              '#ffc0cb', '#ffd700', '#C65BCF', '#ff7373', '#ffeb3b','#eea83b', 
+              '#E1AFD1','#F27BBD', '#FF9040', '#CC0000'
             ]}
             onChange={(color) => { setFillColor(color.hex); }}
             className="compact-picker"
           />
         </div>
-        <div>
+        
+        <div style={{ width: "150px", overflow: "visible" }}>
           <label>Border Color:</label>
           <Circle
-            style={{ marginLeft: 20, backgroundColor:` ${fillColor}`}}  // Background color change
+            style={{ marginTop: "10px", width: "100%" }}  // Ensure color picker fits in the container
             color={strokeColor}
             colors={[
               '#66cdaa', '#008000', '#00ced1', '#b4eeb4', '#088da5', 
               '#81d8d0', '#a0db8e', '#80B9AD','#EEDF7A','#7469B6',
-              '#E9FF97','#B4D6CD',
+              '#E9FF97','#B4D6CD','#6b7f64', '#339551'
             ]}
             onChange={(color) => { setStrokeColor(color.hex); }}
             className="compact-picker"
@@ -110,6 +111,7 @@ export default function Petal() {
 
       <button style={{ marginTop: "20px" }} onClick={handleSubmit}>Submit</button>
 
+      {/* Preview SVG */}
       <div style={{ marginTop: "20px" }}>
         <svg viewBox="0 0 100 100" style={{ width: "100%", height: "100%", maxWidth: "100px", maxHeight: "100px", overflow: "visible", margin: "5px" }}>
           <path
@@ -128,6 +130,7 @@ export default function Petal() {
         </svg>
       </div>
 
+      {/* List of petals */}
       <div style={{ display: "flex", flexWrap: "wrap", gap: "20px", marginTop: "20px" }}>
         {petalList.map((petal, index) => (
           <div key={index} style={{ padding: "10px", border: "1px solid #ddd", borderRadius: "8px" }}>
