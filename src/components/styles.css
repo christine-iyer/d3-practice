@@ -14,8 +14,8 @@
   border-radius: 0;
 }
 .compact-picker .uiw-color-pick-block-active {
-  color: '#A25772';
+  color: 'blue';
 }
 .circle-picker .uiw-color-circle-pointer {
-  border-radius: 50%;
+  border-radius: 100%;
 }

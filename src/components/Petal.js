@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Compact, Circle } from '@uiw/react-color';
-import './styles.css'
+
 export default function Petal() {
   const [controlPoint1, setControlPoint1] = useState({ x: 44, y: 49 });
   const [controlPoint2, setControlPoint2] = useState({ x: 15, y: 70 });
@@ -76,11 +76,11 @@ export default function Petal() {
         </label>
       </div>
 
-      <div style={{ display: "flex", gap: "20px", marginTop: "20px", borderColor: 'red' }}>
+      <div style={{ display: "flex", gap: "10px", margin: "10px", borderColor: 'red' }}>
         <div>
           <label>Fill Color:</label>
-          <Compact
-            style={{ marginLeft: 20, backgroundColor:` ${strokeColor}`}}  // Background color change
+          <Circle
+            style={{ marginLeft: 0, backgroundColor:` ${strokeColor}`}}  // Background color change
             color={fillColor}
             colors={[
                '#FFDA76', '#FF8C9E', '#FF4E88', '#ffb6b1',
@@ -94,7 +94,7 @@ export default function Petal() {
         </div>
         <div>
           <label>Border Color:</label>
-          <Compact
+          <Circle
             style={{ marginLeft: 20, backgroundColor:` ${fillColor}`}}  // Background color change
             color={strokeColor}
             colors={[
